@@ -29,9 +29,12 @@ $(document).ready(function() {
 	$('.close-menu-btn').click(function(){
 		$('header').removeClass('menu-open');
 	})
-	
-	// //methods
-	// $.fn.fullpage.setAllowScrolling(false);
+	$('.search').click(function(){
+		$('.search_box').addClass('show');
+	})
+	$('.close_search_box').click(function(){
+		$('.search_box').removeClass('show');
+	})
 	$('.go-top').click(function(){
 		$('html').animate({ scrollTop : 0}, 400);
 	})

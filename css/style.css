@@ -138,6 +138,7 @@ button{
   background-size: cover;
   width: 14vw;
   height: 8vh;
+  text-indent: -99999px;
 }
 .nav{
     height: 100%;
@@ -232,10 +233,65 @@ button{
     width: 60px;
     height: 30px;
 }
-#header:hover .util .lang-open-btn{
+.search_box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 100px 0 200px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+.search_box.show{
+  opacity: 1;
+  visibility: visible;
+}
+.search_box h1{
+  font-size: 55px;
+  margin: 0 0 50px 0;
+  position: relative;
+}
+.search_box_inner{
+  width: 610px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+.close_search_box{
+  position: absolute;
+  right: 20%;
+  top: 90px;
+  cursor: pointer;
+}
+.close_search_box i{
+  font-size: 42px;
+}
+.search_box form input{
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid #fe6b0c;
+  padding: 10px;
+  font-size: 24px;
+}
+.search_box form input:focus{
+  outline: none;
+}
+.search_box button{
+  position: absolute;
+  right: -20px;
+  top: 15px;
+}
+.search_box button i{
+  font-size: 28px;
+}
+#header:hover .util .lang-open-btn:hover{
   color: rgba(254, 99, 22, 1);
 }
-#header:hover .util .search-btn i{
+#header:hover .util .search-btn i:hover{
   color: rgba(254, 99, 22, 1);
 }
 #header.active .util .lang-open-btn{
@@ -332,15 +388,15 @@ button{
 }
 
 .first .swiper-wrapper .bg1{
-  background: url(/images/food-1216048_1920.jpg) no-repeat center;
+  background: url('../images/food-1216048_1920.jpg') no-repeat center;
   background-size: cover;
 }
 .first .swiper-wrapper .bg2{
-  background: url(/images/if-the-953110_1280.jpg) no-repeat center;
+  background: url('../images/if-the-953110_1280.jpg') no-repeat center;
   background-size: cover;
 }
 .first .swiper-wrapper .bg3{
-  background: url(/images/noodles-4851996_1920.jpg) no-repeat center;
+  background: url('../images/noodles-4851996_1920.jpg') no-repeat center;
   background-size: cover;
 }
 .first .swiper-wrapper .swiper-slide .title{
@@ -490,7 +546,7 @@ button{
   width: 50%;
 }
 .business-bio div{
-  background: url('../images/바이오.jpg') no-repeat;
+  background: url('../images/bio.jpg') no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -947,8 +1003,11 @@ button{
   .menu-open .hide-menu{
     right: 0;
   }
-  .util{
+  .lang{
     display: none;
+  }
+  .search{
+    padding-right: 50px;
   }
   .nav-hide{
     display: block;
@@ -1127,7 +1186,34 @@ button{
     width: 30vw;
     height: 8vw;
   }
-
+  .search_box_inner{
+    width: 510px;
+  }
+  .search_box form input{
+    width: 70%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #fe6b0c;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .search_box button{
+    position: absolute;
+    right: 70px;
+    top: 15px;
+  }
+  .search_box button i{
+    font-size: 24px;
+  }
+  .close_search_box{
+    position: absolute;
+    right: 10%;
+    top: 70px;
+    cursor: pointer;
+  }
+  .close_search_box i{
+    font-size: 32px;
+  }
   .first .swiper-wrapper .swiper-slide .title p:nth-child(2){
     font-size: 50px;
   }
@@ -1284,6 +1370,37 @@ button{
     width: 30vw;
     height: 8vw;
   }
+  .search_box h1{
+    font-size: 32px;
+  }
+  .search_box_inner{
+    width: 310px;
+  }
+  .search_box form input{
+    width: 70%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #fe6b0c;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .search_box button{
+    position: absolute;
+    right: 35px;
+    top: 15px;
+  }
+  .search_box button i{
+    font-size: 24px;
+  }
+  .close_search_box{
+    position: absolute;
+    right: 10%;
+    top: 70px;
+    cursor: pointer;
+  }
+  .close_search_box i{
+    font-size: 24px;
+  }
   .first .swiper-wrapper .swiper-slide .title p:nth-child(2){
     width: 1000px;
   }
@@ -1374,6 +1491,7 @@ button{
   width: 88px;
   height: 70px;
 }
+
 }
 @media screen and (max-width: 376px){
   .business-description div:nth-of-type(1){
@@ -1428,6 +1546,7 @@ button{
   .content-img{
     margin: 0;
   }
+
 }
 
 /* footer///////////////////////// */
@@ -1498,6 +1617,12 @@ button{
     height: 5vh;
     background: url('../images/logo.svg') no-repeat center;
     background-size: contain;
+  }
+  .footer-container{
+    width: 100%;
+    padding: 40px 40px;
+    background-color: #333;
+    text-align: center;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1574,7 +1699,7 @@ button{
   height: 100%;
 }
 .content1-img{
-  background: url('../images/sub\ img1.jpg') no-repeat center;
+  background: url('../images/sub_img.jpg') no-repeat center;
   background-size: cover;
   width: 70%;
   height: 30vw;
@@ -1651,7 +1776,7 @@ button{
 .value-container{
   width: 100%;
   height: 930px;
-  background: url('../images/회사.jpg') no-repeat center;
+  background: url('../images/sub_banner_2.jpg') no-repeat center;
   background-size: cover;
 }
 .value-container h1{
