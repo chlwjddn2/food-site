@@ -28,7 +28,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+
 
 }
 ol, ul {
@@ -64,6 +65,10 @@ button{
 }
 
 /* ///////////////////////////////////////////// */
+.skipNav{
+  position: absolute;
+  top: -1000px;
+}
 .wrap,
 #main{
     width: 100%;
@@ -248,7 +253,7 @@ button{
   opacity: 1;
   visibility: visible;
 }
-.search_box h1{
+.search_box p{
   font-size: 55px;
   margin: 0 0 50px 0;
   position: relative;
@@ -361,6 +366,10 @@ button{
 .mainvisual{
     width: 100%;
     height: 100%;
+}
+.mainvisual h2{
+  text-indent: -9999px;
+  display: none;
 }
 .first {
     width: 100%;
@@ -588,7 +597,7 @@ button{
   font-weight: 700;
   font-size: 24px;
 }
-.business-description div:nth-of-type(1) h1{
+.business-description div:nth-of-type(1) h2{
   font-size: 55px;
   padding: 50px 0 20px 0;
   font-family: 'Montserrat', sans-serif;
@@ -1046,7 +1055,7 @@ button{
   .business-description div{
     margin-bottom: 20px;
   }
-  .business-description div:nth-of-type(1) h1{
+  .business-description div:nth-of-type(1) h2{
     padding: 20px 0 20px 0;
   }
   .business-description div:nth-of-type(2) a{
@@ -1071,7 +1080,7 @@ button{
   .business-description div:nth-of-type(1) p:nth-of-type(1){
     font-size: 20px;
   }
-  .business-description div:nth-of-type(1) h1{
+  .business-description div:nth-of-type(1) h2{
     font-size: 38px;
   }
   .business-description div:nth-of-type(1) p:nth-of-type(2){  
@@ -1238,7 +1247,7 @@ button{
   .business-description div{
     margin-bottom: 20px;
   }
-  .business-description div:nth-of-type(1) h1{
+  .business-description div:nth-of-type(1) h2{
     padding: 20px 0 20px 0;
   }
   .business-description div:nth-of-type(2) a{
@@ -1358,7 +1367,7 @@ button{
     width: 30vw;
     height: 8vw;
   }
-  .search_box h1{
+  .search_box p{
     font-size: 32px;
   }
   .search_box_inner{
@@ -1404,7 +1413,7 @@ button{
   .business-description div:nth-of-type(1) p:nth-of-type(1){
     font-size: 16px;
   }
-  .business-description div:nth-of-type(1) h1{
+  .business-description div:nth-of-type(1) h2{
     font-size: 24px;
   }
   .business-description div:nth-of-type(1) p:nth-of-type(2){  
@@ -1494,7 +1503,7 @@ button{
   .business-description div:nth-of-type(1){
     margin-bottom: 10px;
   }
-  .business-description div:nth-of-type(1) h1{
+  .business-description div:nth-of-type(1) h2{
     padding:  10px 0;
   }
   .business-description div:nth-of-type(2) h2{
@@ -1655,7 +1664,7 @@ button{
   color: #fff;
   transform: translateY(-50%);
 }
-.sub-title h1{
+.sub-title h2{
   font-size: 55px; 
   padding: 40px 0;
   font-weight: 500;
@@ -1668,6 +1677,9 @@ button{
   width: 100%;
   padding: 40px 40px 120px 40px;
   text-align: right;
+}
+.sub-nav h2{
+  text-indent: 1000%;
 }
 .sub-nav-inner{
   max-width: 1280px;
@@ -1776,7 +1788,7 @@ button{
   background: url('../images/sub_banner_2.jpg') no-repeat center;
   background-size: cover;
 }
-.value-container h1{
+.value-container h2{
   text-align: center;
   color: #fff;
   font-size: 88px;
@@ -1847,7 +1859,7 @@ button{
     padding: 40px 10px;
   }
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
   .content1-description h2{
     font-size: 18px;
     padding: 50px;
@@ -1897,7 +1909,7 @@ button{
     margin-top: 20px;
     font-size: 19px; 
   }
-  .value-container h1{
+  .value-container h2{
     text-align: center;
     color: #fff;
     font-size: 50px;
@@ -1924,7 +1936,7 @@ button{
     line-height: 20px;
     color: #555555;
   }
-  .value-container h1{
+  .value-container h2{
     text-align: center;
     color: #fff;
     font-size: 50px;
