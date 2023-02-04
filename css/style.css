@@ -920,7 +920,7 @@ button{
 }
 @media screen and (max-width: 1600px){
   .business-description{
-    padding: 100px 0 100px 100px;
+    padding: 50px 0 100px 100px;
   }
   .business-description div{
     margin-bottom: 80px;
